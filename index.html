@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>$NYANCAT</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Press Start 2P', monospace;
+            background: linear-gradient(135deg, #ff80ab, #8c9eff);
+            color: white;
+            min-height: 100vh;
+            padding: 20px;
+            animation: hueRotate 20s linear infinite;
+        }
+        
+        @keyframes hueRotate {
+            0% {
+                filter: hue-rotate(0deg);
+            }
+            100% {
+                filter: hue-rotate(360deg);
+            }
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px #000;
+        }
+        
+        .tagline {
+            font-size: 1rem;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .contract {
+            text-align: center;
+            background: #111111aa;
+            padding: 10px;
+            border: 2px dashed #ffffff88;
+            border-radius: 10px;
+            margin: 20px auto;
+            max-width: 700px;
+            word-break: break-all;
+        }
+        
+        .how-to-buy {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #00000088;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px #fff3;
+        }
+        
+        ol {
+            padding-left: 20px;
+            margin-top: 10px;
+        }
+        
+        a {
+            color: #ffff88;
+            text-decoration: underline;
+        }
+        
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+        
+        .copy-btn {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 12px;
+            font-size: 0.7rem;
+            background: #ff4081;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            color: white;
+        }
+        
+        .copy-btn:hover {
+            background: #ff1a64;
+        }
+        
+        .warning {
+            background: #ff000088;
+            color: #fff;
+            font-size: 0.8rem;
+            text-align: center;
+            margin: 20px auto;
+            padding: 10px;
+            border-radius: 10px;
+            max-width: 600px;
+            border: 1px solid #ff0000;
+        }
+        
+        .gif-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        
+        .gif-container img {
+            width: 300px;
+            max-width: 80%;
+            border-radius: 12px;
+            box-shadow: 0 0 10px #fff9;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>$NYANCAT</h1>
+        <div class="tagline">
+            Welcome to the home of $NYANCat on the Solana blockchain.<br> The $NYAN Cat is a beloved nostalgic internet sensation.<br> Join a vibrant community of meme lovers, crypto enthusiasts, and Solana supporters who are taking $NYAN Cat to the moon.
+        </div>
+        <p>Follow us on <br>X: <a href="https://twitter.com/cto_nyancat" target="_blank">@cto_nyancat</a></p>
+        <p>Telegram: <a href="    https://t.me/nyancat_cto" target="_blank">NYANCAT</a></p>
+
+    </header>
+
+    <div class="gif-container">
+        <img src="https://media.giphy.com/media/sIIhZliB2McAo/giphy.gif" alt="Nyan Cat GIF">
+    </div>
+
+    <div class="contract">
+        <strong>CA:</strong> <span id="ca-text">ortdBVgTTsjcfSJtcoYaHT24eA3zLRaMxkwqFnGpnm6</span><br>
+        <button class="copy-btn" onclick="copyCA()">Copy Address</button>
+    </div>
+
+    <section class="how-to-buy">
+        <h2>How To Buy $NYAN</h2>
+        <ol>
+            <li>Download <a href="https://phantom.app/" target="_blank">Phantom Wallet</a>.</li>
+            <li>Buy $SOL on any exchange and send it to your wallet. Or buy $SOL directly in your Phantom Wallet if supported in your country.</li>
+            <li>Go to <a href="https://jup.ag/" target="_blank">Jup.ag</a> or <a href="https://raydium.io/" target="_blank">Raydium.io</a> and connect your wallet.</li>
+            <li>Copy the contract address above and paste it into the swap box, and boom! You now own Solana’s best known cat coin!</li>
+        </ol>
+    </section>
+
+    <div class="warning">
+        Always double-check the contract address on official channels before trading. Avoid clicking links from DMs or random sources!
+    </div>
+
+    <footer>
+        Powered by memes. Built for the culture. Based and trusted.<br> &copy; 2025 $NYANCAT
+    </footer>
+
+    <script>
+        function copyCA() {
+            const text = document.getElementById('ca-text').innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Contract address copied to clipboard!');
+            }).catch(err => {
+                alert('Failed to copy: ' + err);
+            });
+        }
+    </script>
+</body>
+
+</html>
